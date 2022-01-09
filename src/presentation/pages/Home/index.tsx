@@ -3,7 +3,6 @@ import React from "react";
 // ASSETS
 
 // STYLES
-import { PresentationPage } from "./style";
 
 // COMPONENTS
 import Footer from "presentation/components/Footer";
@@ -16,7 +15,6 @@ import MaterialDownload from "presentation/components/MaterialDownload";
 export default function Home() {
   return (
     <>
-      {/* <PresentationPage></PresentationPage> */}
       <BannerInfo />
       <AboutEvent />
       <Subscription />

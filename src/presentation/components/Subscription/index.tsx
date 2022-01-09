@@ -2,7 +2,7 @@ import React from "react";
 
 // COMPONENTS
 import TitleSection from "../TitleSection";
-import { BtnSecondary } from "../Buttons";
+import { LinkSecondary } from "../Buttons/Links";
 
 // STYLES
 import { ContainerSubscription } from "./style";
@@ -12,11 +12,16 @@ export default function Subscription() {
     <ContainerSubscription>
       <TitleSection title="Inscrição" />
       <p className="sub__description">
-        A inscrição ficará disponível até o dia
-        <strong className="sub__strong"> 10 de janeiro de 2022</strong>, clique
-        no botão abaixo para realizar sua inscrição.
+        A inscrição ficará disponível de
+        <strong className="sub__strong"> 06/01/2022</strong> a{" "}
+        <strong className="sub__strong">18/01/2022</strong>, clique no botão
+        abaixo para realizar sua inscrição.
       </p>
-      <BtnSecondary title="IR PARA INSCRIÇÃO" />
+      <LinkSecondary
+        link="https://www.even3.com.br/iiseminariodemobilidade/"
+        blank
+        title="IR PARA INSCRIÇÃO"
+      />
     </ContainerSubscription>
   );
 }

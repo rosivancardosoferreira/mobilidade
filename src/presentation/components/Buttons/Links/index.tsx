@@ -6,32 +6,32 @@ import { LinkContainer } from "../style";
 interface PropsBtn {
   link: string;
   title: string;
-  onClick?: () => void;
   type?: "button" | "submit";
   blank?: boolean;
 }
 
-export function LinkPrimary({ link, title, onClick, blank }: PropsBtn) {
+export function LinkPrimary({ link, title, blank }: PropsBtn) {
   return (
     <LinkContainer
       href={link}
       target={blank ? "_blank" : "_self"}
-      onClick={onClick}
       typeBtn="primary"
       className="down link__primary"
+      rel="noreferrer"
     >
       {title}
     </LinkContainer>
   );
 }
 
-export function BtnSecondary({ title, onClick, type }: PropsBtn) {
+export function LinkSecondary({ link, title, blank }: PropsBtn) {
   return (
     <LinkContainer
-      type={type || "button"}
-      onClick={onClick}
+      href={link}
+      target={blank ? "_blank" : "_self"}
       typeBtn="secondary"
       className="down btn__secondary"
+      rel="noreferrer"
     >
       {title}
     </LinkContainer>

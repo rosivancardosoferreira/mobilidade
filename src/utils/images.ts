@@ -1,19 +1,23 @@
 const Images = {
   Logo: {
     src: "/static/images/LOGO.png",
-    alt: "Logo empresa"
-  },
-  LogoWhite: {
-    src: "/static/images/LOGO_WHITE.png",
-    alt: "Logo empresa"
+    alt: "Logo Evento"
   },
   Banner: {
     src: "/static/images/banner_image.png",
-    alt: "Banner Doação"
+    alt: "Banner Mobilidade Urbana"
   },
-  Fakelog: {
-    src: "/static/images/round-logo.png",
-    alt: "Logo Parceiros"
+  Icet: {
+    src: "/static/images/icet.png",
+    alt: "Logo ICET"
+  },
+  Ufam: {
+    src: "/static/images/ufam.png",
+    alt: "Logo UFAM"
+  },
+  Fapeam: {
+    src: "/static/images/fapeam.png",
+    alt: "Logo FAPEAM"
   }
 };
 
