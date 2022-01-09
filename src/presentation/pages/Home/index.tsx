@@ -11,6 +11,7 @@ import BannerInfo from "presentation/components/BannerInfo";
 import AboutEvent from "presentation/components/AboutEvent";
 import Subscription from "presentation/components/Subscription";
 import Schedule from "presentation/components/Schedule";
+import MaterialDownload from "presentation/components/MaterialDownload";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutEvent />
       <Subscription />
       <Schedule />
+      <MaterialDownload />
       <Footer />
     </>
   );

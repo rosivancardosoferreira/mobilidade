@@ -4,17 +4,12 @@ interface propsButton {
 }
 
 const BtnPrimary = css`
-  background-color: ${props => props.theme.colors.blueDark};
+  background-color: ${props => props.theme.colors.lightBlue};
   color: ${props => props.theme.colors.primaryWhite};
   font-size: var(--f-normal);
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  border: 2px solid ${props => props.theme.colors.blueDark};
-  &:hover {
-    background-color: transparent;
-    color: ${props => props.theme.colors.blueDark};
-    border: 2px solid ${props => props.theme.colors.blueDark};
-  }
+  /* border: 2px solid ${props => props.theme.colors.blueDark}; */
 `;
 
 const BtnSecondary = css`
@@ -40,14 +35,23 @@ const BtnSendMessage = css`
   }
 `;
 
-export const ButtonContainer = styled.button<propsButton>`
+export const ButtonDefault = css<propsButton>`
   display: block;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s;
   width: fit-content;
+  text-align: center;
   ${props => props.typeBtn === "primary" && BtnPrimary}
   ${props => props.typeBtn === "secondary" && BtnSecondary}
   ${props => props.typeBtn === "send__message" && BtnSendMessage}
+`;
+
+export const ButtonContainer = styled.button`
+  ${ButtonDefault}
+`;
+
+export const LinkContainer = styled.a`
+  ${ButtonDefault}
 `;

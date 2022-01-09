@@ -1,13 +1,13 @@
 import React from "react";
 
 // STYLES
-import { ContainerSchedule, ContainerItemsMap } from "./style";
+import { ContainerMaterialDownload, ContainerItemsMap } from "./style";
 
 // COMPONENTS
 import TitleSection from "../TitleSection";
-import ItemSchedule from "./ItemSchedule";
+import ItemDownload from "./ItemDownload";
 
-export default function Schedule() {
+export default function MaterialDownload() {
   const fakePost = [
     {
       image:
@@ -47,13 +47,13 @@ export default function Schedule() {
     }
   ];
   return (
-    <ContainerSchedule>
-      <TitleSection title="Programação" />
+    <ContainerMaterialDownload>
+      <TitleSection title="Materiais disponíveis" />
       <ContainerItemsMap>
         {fakePost.map((elem, id) => {
-          return <ItemSchedule key={id} />;
+          return <ItemDownload key={id} />;
         })}
       </ContainerItemsMap>
-    </ContainerSchedule>
+    </ContainerMaterialDownload>
   );
 }
