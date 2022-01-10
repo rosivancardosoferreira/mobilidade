@@ -48,7 +48,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
             rel="stylesheet"
           />
-
+          <meta
+            name="description"
+            content="II Seminário de Mobilidade Urbana de Itacoatiara 2022"
+          ></meta>
           <link rel="icon" href="/static/favicon.ico" />
         </Head>
         <body>
