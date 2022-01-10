@@ -7,22 +7,26 @@ import { LinkPrimary } from "../../Buttons/Links";
 // STYLES
 import { ContainerItem } from "./style";
 
+interface ItemDownloadProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
 // COMPONENTS
-export default function ItemDownload() {
+export default function ItemDownload({
+  title,
+  description,
+  link
+}: ItemDownloadProps) {
   return (
     <ContainerItem>
-      {Icons.materialDownload}
-      <p className="item__material__title">Pedalando na cidade</p>
-      <p className="item__material__description">
-        Brede descriçãodo material para download de no maximo 70 caracteres sas
-      </p>
-      <a href=""></a>
-
-      <LinkPrimary
-        link="https://www.youtube.com/watch?v=fNLvf0AIcRI"
-        title="Download"
-        blank
-      />
+      <article className="download__item">
+        {Icons.materialDownload}
+        <p className="item__material__title">{title}</p>
+        <p className="item__material__description">{description}</p>
+      </article>
+      <LinkPrimary link={link} title="Download" download />
     </ContainerItem>
   );
 }

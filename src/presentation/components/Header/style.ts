@@ -38,6 +38,8 @@ export const HeaderContainer = styled.header<propsHeader>`
       display: none;
     }
     img {
+      width: 110px;
+      height: 61px;
     }
     .l-header__item_header {
       display: flex;

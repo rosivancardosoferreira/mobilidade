@@ -7,10 +7,13 @@ export default function Header() {
   useEffect(() => {
     document.body.style.overflowY = open ? "hidden" : "auto";
   }, [open]);
+  function controlSibeMenu() {
+    setOpen(!open);
+  }
   return (
     <HeaderContainer open={open}>
       <div className="l-background" onClick={() => setOpen(false)}></div>
-      <SideMenu open={open} />
+      <SideMenu open={open} control={controlSibeMenu} />
       <div className="l-header">
         <div
           onClick={() => setOpen(!open)}
@@ -21,13 +24,13 @@ export default function Header() {
         <img src={Images.Logo.src} alt={Images.Logo.alt} />
         <ul className="l-header__item_header">
           <li>
-            <a href="">Sobre o evento</a>
+            <a href="#about">Sobre o evento</a>
           </li>
           <li>
-            <a href="">Inscrição</a>
+            <a href="#subscription">Inscrição</a>
           </li>
           <li>
-            <a href="">Programação</a>
+            <a href="#schedule">Programação</a>
           </li>
         </ul>
       </div>

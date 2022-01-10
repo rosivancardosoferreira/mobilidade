@@ -9,7 +9,7 @@ import { ContainerSubscription } from "./style";
 
 export default function Subscription() {
   return (
-    <ContainerSubscription>
+    <ContainerSubscription id="subscription">
       <TitleSection title="Inscrição" />
       <p className="sub__description">
         A inscrição ficará disponível de

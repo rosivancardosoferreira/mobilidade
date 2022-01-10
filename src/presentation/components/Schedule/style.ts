@@ -7,10 +7,12 @@ export const ContainerSchedule = styled.section`
 
 export const ContainerItemsMap = styled.div`
   display: grid;
+  column-gap: 32px;
+  row-gap: 32px;
+  grid-template-columns: repeat(1, 1fr);
 
   @media screen and (min-width: 768px) {
     max-width: var(--max-width-tablet);
-    column-gap: 32px;
   }
 
   @media screen and (min-width: 1024px) {

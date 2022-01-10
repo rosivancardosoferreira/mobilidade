@@ -30,9 +30,6 @@ export const SectionNormal = css`
     padding: 0 32px;
   }
 
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1024px) {
     max-width: var(--max-width-desktop);
     padding: 0 72px;

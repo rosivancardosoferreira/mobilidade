@@ -63,17 +63,16 @@ export default function Footer() {
         <article className="footer__street"></article>
         <article className="footer__credits">
           <p className="footer__description">
-            © II Seminário de Mobilidade Urbana de Itacoatiara 2022.
-            <a
-              href="https://github.com/rosivancardosoferreira"
-              target={"_blank"}
-              rel="noreferrer"
-              className="footer__dev"
-            >
-              {" "}
-              Desenvolvido por Rosivan Cardoso
-            </a>
+            © II Seminário de Mobilidade Urbana de Itacoatiara 2022.{" "}
           </p>
+          <a
+            href="https://github.com/rosivancardosoferreira"
+            target={"_blank"}
+            rel="noreferrer"
+            className="footer__dev"
+          >
+            Desenvolvido por Rosivan Cardoso
+          </a>
         </article>
       </div>
     </ContainerFooter>

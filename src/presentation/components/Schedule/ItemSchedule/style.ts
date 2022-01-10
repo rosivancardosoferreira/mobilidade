@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerItem = styled.section`
-  margin-bottom: 3rem;
   display: flex;
   filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
   .item__date {
@@ -90,6 +89,12 @@ export const ContainerItem = styled.section`
       .svg__control {
         transform: rotate(180deg);
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .item__date {
+      padding: 0 20px;
     }
   }
 `;

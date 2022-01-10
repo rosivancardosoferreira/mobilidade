@@ -5,20 +5,31 @@ import Icons from "utils/icons";
 import { ContainerItem } from "./style";
 
 // COMPONENTS
-export default function ItemSchedule() {
+interface ItemScheduleProps {
+  day: string;
+  title: string;
+  people: string;
+  description: string;
+  time: string;
+}
+export default function ItemSchedule({
+  day,
+  title,
+  people,
+  description,
+  time
+}: ItemScheduleProps) {
   const [expand, setExpand] = useState(false);
   return (
     <ContainerItem>
       <article className="item__date">
-        <h2 className="item__num">10</h2>
+        <h2 className="item__num">{day}</h2>
         <p className="item__month">jan</p>
       </article>
       <article className="item__datas">
         <div className="item__datas__people">
-          <h3 className="item__title_activity">Titulo da paletra</h3>
-          <p className="item__people">
-            Palestrante: Fula da silva de tal tal tal
-          </p>
+          <h3 className="item__title_activity">{title}</h3>
+          <p className="item__people">{people}</p>
           <p
             className={
               expand
@@ -26,14 +37,11 @@ export default function ItemSchedule() {
                 : "item__activity_description item__activity_description__close"
             }
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nisi
-            ex, aliquid repellendus corporis labore sint, consectetur deleniti
-            fuga natus veniam iure alias? Provident error possimus impedit
-            ipsam, molestias eligendi!
+            {description}
           </p>
           <div className="item__time">
             {Icons.time}
-            <p className="item__time_desc">13:50</p>
+            <p className="item__time_desc">{time}</p>
           </div>
         </div>
         <button

@@ -3,9 +3,6 @@ import React from "react";
 // ASSETS
 
 // STYLES
-
-// COMPONENTS
-import Footer from "presentation/components/Footer";
 import BannerInfo from "presentation/components/BannerInfo";
 import AboutEvent from "presentation/components/AboutEvent";
 import Subscription from "presentation/components/Subscription";
@@ -20,7 +17,6 @@ export default function Home() {
       <Subscription />
       <Schedule />
       <MaterialDownload />
-      <Footer />
     </>
   );
 }

@@ -2,12 +2,10 @@ import styled from "styled-components";
 import { SectionNormal } from "styles/shared";
 export const ContainerFooter = styled.section`
   grid-column: 1 / 4;
-
   .footer__first__part {
     ${SectionNormal}
     display: flex;
     justify-content: space-between;
-
     .footer__title {
       color: ${props => props.theme.colors.blueDark};
       font-size: var(--f-normal);
@@ -23,6 +21,7 @@ export const ContainerFooter = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
+      width: fit-content;
     }
 
     .footer__realization {
@@ -95,10 +94,12 @@ export const ContainerFooter = styled.section`
       background-color: ${props => props.theme.colors.BlackDark};
       display: flex;
       justify-content: center;
+      gap: 3px;
       padding: 12px;
-
+      
       .footer__description,
       .footer__dev {
+        text-align: center;
         color: ${props => props.theme.colors.primaryWhite};
         font-size: var(--f-normal);
         font-family: "Source Sans Pro", sans-serif;
@@ -106,10 +107,13 @@ export const ContainerFooter = styled.section`
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    .footer__realization,
-    .footer__support,
-    .footer__support {
+  @media screen and (max-width: 1023px) {
+    .footer__first__part {
+      flex-direction: column;
+      row-gap: 40px;
     }
-  }
+    .footer__credits {
+      align-items: center;
+      flex-direction: column;
+    }
 `;

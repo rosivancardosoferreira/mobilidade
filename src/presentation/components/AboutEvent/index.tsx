@@ -8,7 +8,7 @@ import { ContainerAboutEvent } from "./style";
 
 export default function AboutEvent() {
   return (
-    <ContainerAboutEvent>
+    <ContainerAboutEvent id="about">
       <TitleSection title="Sobre o evento" />
       <p className="about__description">
         O evento visa debater sobre um tema atual em todas as cidades, que é a
