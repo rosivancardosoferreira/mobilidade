@@ -6,6 +6,7 @@ export const ContainerBannerInfo = styled.section`
   grid-column: 1 / 4;
   position: relative;
   background: url(${Images.Banner.src});
+  background-color: ${props => props.theme.colors.blueDark};
   background-repeat: no-repeat;
   background-size: cover;
   padding: 90px 0;
