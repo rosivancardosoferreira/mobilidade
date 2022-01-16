@@ -1,14 +1,13 @@
 import React from "react";
 
+import { Header, Footer } from "presentation/sections";
 import {
-  Header,
   AboutEvent,
   BannerInfo,
   MaterialDownload,
   Schedule,
-  Subscription,
-  Footer
-} from "presentation/sections";
+  Subscription
+} from "presentation/sections/home";
 
 export default function Home() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // COMPONENTS
-import TitleSection from "../../components/TitleSection";
+import TitleSection from "../../../components/TitleSection";
 import { Example } from "./Example";
 
 // STYLES
