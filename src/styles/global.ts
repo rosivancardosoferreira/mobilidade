@@ -38,6 +38,9 @@ export default createGlobalStyle`
   body,
   html { 
     overflow-x: hidden;
+    :target {
+      scroll-margin-top: .8em;
+    }
   }
   
   body {

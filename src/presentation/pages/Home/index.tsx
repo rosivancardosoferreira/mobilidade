@@ -8,12 +8,14 @@ import {
   Schedule,
   Subscription
 } from "presentation/sections/home";
+import { Form } from "presentation/sections/home/Form";
 
 export default function Home() {
   return (
     <>
       <Header />
       <BannerInfo />
+      <Form />
       <AboutEvent />
       <Subscription />
       <Schedule />
