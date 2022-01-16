@@ -1,39 +1,112 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
+import { formSubmit } from "utils/formSubmit";
 import { Teste } from "./styles";
+import { Form, Field } from "react-final-form";
 
-export function Form() {
+interface Props {
+  nome: string;
+  email: string;
+}
+const validate = (values: Props) => {
+  const errors: any = {};
+  if (!values.nome) {
+    errors.nome = "Campo obrigatório";
+  }
+  if (!values.email) {
+    errors.email = "Campo obrigatório";
+  }
+  return errors;
+};
+
+export function FormTeste() {
+  const [enviado, setEnviado] = useState(false);
+
+  const onSubmit = useCallback(async (values, form) => {
+    try {
+      await formSubmit("contact")(values).then(() => {
+        setEnviado(true);
+      });
+      setTimeout(() => {
+        Object.keys(values).forEach(key => {
+          form.resetFieldState(key);
+        });
+        form.reset();
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
+
   return (
     <Teste>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Role:{" "}
-            <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select>
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message"></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <Form
+        validate={validate}
+        onSubmit={onSubmit}
+        render={({ handleSubmit }) => (
+          <form name="contact" data-netlify="true" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
+
+            <Field name="nome">
+              {({ input, meta }) => (
+                <div className="message-newslatter">
+                  <input
+                    {...input}
+                    type="text"
+                    className="input"
+                    placeholder="Nome"
+                  />
+                  <p
+                    className={
+                      meta.error && meta.touched
+                        ? "required-empty"
+                        : "required-empty-hidden"
+                    }
+                  >
+                    {meta.error}
+                  </p>
+                </div>
+              )}
+            </Field>
+            <Field name="email">
+              {({ input, meta }) => (
+                <div className="message-newslatter">
+                  <input
+                    {...input}
+                    type="email"
+                    className="input"
+                    placeholder="E-mail"
+                  />
+                  <p
+                    className={
+                      meta.error && meta.touched
+                        ? "required-empty"
+                        : "required-empty-hidden"
+                    }
+                  >
+                    {meta.error}
+                  </p>
+                </div>
+              )}
+            </Field>
+            <button
+              type="submit"
+              //   disabled={disabledSubmit(values.nome, values.email)}
+            >
+              ENVIAR
+            </button>
+            {enviado && (
+              <>
+                {" "}
+                <h1>APA, ENVIADO</h1>
+                <button type="button" onClick={() => setEnviado(false)}>
+                  {" "}
+                  voltart
+                </button>
+              </>
+            )}
+          </form>
+        )}
+      />
     </Teste>
   );
 }

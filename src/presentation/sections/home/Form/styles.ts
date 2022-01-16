@@ -22,4 +22,11 @@ export const Teste = styled.section`
   button {
     padding: 20px;
   }
+
+  .required-empty {
+    color: red;
+  }
+  .required-empty-hidden {
+    opacity: 0;
+  }
 `;
