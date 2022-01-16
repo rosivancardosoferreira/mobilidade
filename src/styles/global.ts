@@ -30,11 +30,21 @@ export default createGlobalStyle`
   font-family: ${props => props.theme.fonts.Montserrat};
   font-family: ${props => props.theme.fonts.SourceSansPro};
   */
+  html {
+    height: -webkit-fill-available;
+    scroll-behavior: smooth;
+  }
 
+  body,
+  html { 
+    overflow-x: hidden;
+  }
+  
   body {
     background: #FFFFFF;
     min-height: 100vh;
     min-height: -webkit-fill-available;
+    position: relative;
     #__next {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
@@ -48,8 +58,5 @@ export default createGlobalStyle`
         transform: translateY(-2px);
     }
   }
-  html {
-    height: -webkit-fill-available;
-    scroll-behavior: smooth;
-  }
+  
 `;
