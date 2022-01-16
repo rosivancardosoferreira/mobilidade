@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
-import { formSubmit } from "utils/formSubmit";
 import { Teste } from "./styles";
 import { Form, Field } from "react-final-form";
+import querystring from "qs";
 
 interface Props {
   nome: string;
@@ -21,9 +21,22 @@ const validate = (values: Props) => {
 export function FormTeste() {
   const [enviado, setEnviado] = useState(false);
 
+  const formSubmit =
+    (formName: any, options: any = {}) =>
+    (values: any) => {
+      console.log("call api");
+      console.log(formName);
+      console.log(options);
+      let body = { "form-name": formName, ...values };
+      const headers = { "Content-Type": "application/x-www-form-urlencoded" };
+      body = querystring.stringify(body);
+      return fetch("/", { method: "POST", headers, body });
+    };
+
   const onSubmit = useCallback(async (values, form) => {
     try {
       await formSubmit("contact")(values).then(() => {
+        alert("ENVIADO COM SUCESSO!");
         setEnviado(true);
       });
       setTimeout(() => {
@@ -34,6 +47,7 @@ export function FormTeste() {
       });
     } catch (err) {
       console.log(err);
+      alert("FALHOU COM SUCESSO!");
     }
   }, []);
 
