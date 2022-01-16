@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { LinkContainer } from "../style";
 
@@ -42,6 +43,11 @@ export function LinkSecondary({ link, title, blank }: PropsBtn) {
       typeBtn="secondary"
       className="down btn__secondary"
       rel="noreferrer"
+      as={motion.a}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
     >
       {title}
     </LinkContainer>

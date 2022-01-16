@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { HeaderContainer } from "./style";
 import Images from "utils/images";
 import SideMenu from "./SideMenu";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -22,17 +24,35 @@ export function Header() {
         >
           <div className="l-header__menu_burger"></div>
         </div>
-        <img src={Images.Logo.src} alt={Images.Logo.alt} />
+        <motion.img
+          src={Images.Logo.src}
+          alt={Images.Logo.alt}
+          initial={{ y: -250 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.4 }}
+        />
         <ul className="l-header__item_header">
-          <li>
-            <a href="#about">Sobre o evento</a>
-          </li>
-          <li>
+          <motion.li
+            initial={{ y: -250 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href="#about">Sobre o evento aqui</Link>
+          </motion.li>
+          <motion.li
+            initial={{ y: -250 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <a href="#subscription">Inscrição</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ y: -250 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
             <a href="#schedule">Programação</a>
-          </li>
+          </motion.li>
         </ul>
       </div>
     </HeaderContainer>

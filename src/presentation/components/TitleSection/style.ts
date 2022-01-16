@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerTitleSection = styled.section`
   width: fit-content;
   margin-bottom: 40px;
-  .title__h1 {
+  .title__h2 {
     color: ${props => props.theme.colors.primaryBlackDark};
     font-family: ${props => props.theme.fonts.Montserrat};
     font-weight: 600;

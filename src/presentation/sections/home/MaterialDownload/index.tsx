@@ -12,7 +12,7 @@ import { ContainerMaterialDownload, ContainerItemsMap } from "./style";
 
 export function MaterialDownload() {
   return (
-    <ContainerMaterialDownload>
+    <ContainerMaterialDownload id="download">
       <TitleSection title="Materiais disponíveis" />
       <ContainerItemsMap>
         {Materiais.map((elem, id) => {
@@ -22,6 +22,7 @@ export function MaterialDownload() {
               link={elem.src}
               description={elem.description}
               key={id}
+              i={id}
             />
           );
         })}

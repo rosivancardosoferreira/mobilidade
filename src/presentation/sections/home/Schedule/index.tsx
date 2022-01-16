@@ -22,6 +22,7 @@ export function Schedule() {
               description={elem.description}
               time={elem.time}
               key={id}
+              i={id}
             />
           );
         })}

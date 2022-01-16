@@ -3,17 +3,22 @@ import { motion } from "framer-motion";
 
 // COMPONENTS
 import TitleSection from "../../../components/TitleSection";
-import { Example } from "./Example";
 
 // STYLES
 import { ContainerAboutEvent } from "./style";
+import { animation } from "utils/animations";
 
 export function AboutEvent() {
   return (
-    <ContainerAboutEvent id="about" as={motion.section}>
+    <ContainerAboutEvent id="about">
       <TitleSection title="Sobre o evento" />
-      <Example />
-      <p className="about__description">
+      <motion.p
+        className="about__description"
+        viewport={{ once: true }}
+        initial={animation.fadeY.initial}
+        whileInView={animation.fadeY.whileInView}
+        transition={animation.fadeY.transition06}
+      >
         O evento visa debater sobre um tema atual em todas as cidades, que é a
         mobilidade urbana. Essa parece ser uma alternativa para melhorar a
         qualidade de vida das pessoas, através da busca de soluções para os
@@ -33,7 +38,7 @@ export function AboutEvent() {
         possa vir a ter os mesmos problemas das grandes metrópoles quanto ao
         deslocamento inter e intraurbano, violência no trânsito e tantas outras
         mazelas urbanas.
-      </p>
+      </motion.p>
     </ContainerAboutEvent>
   );
 }

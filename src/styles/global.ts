@@ -50,5 +50,6 @@ export default createGlobalStyle`
   }
   html {
     height: -webkit-fill-available;
+    scroll-behavior: smooth;
   }
 `;

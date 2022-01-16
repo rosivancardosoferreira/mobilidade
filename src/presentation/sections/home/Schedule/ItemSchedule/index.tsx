@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Icons from "utils/icons";
 
@@ -11,17 +12,28 @@ interface ItemScheduleProps {
   people: string;
   description: string;
   time: string;
+  i: number;
 }
 export default function ItemSchedule({
   day,
   title,
   people,
   description,
-  time
+  time,
+  i
 }: ItemScheduleProps) {
   const [expand, setExpand] = useState(false);
   return (
-    <ContainerItem>
+    <ContainerItem
+      as={motion.section}
+      viewport={{ once: true }}
+      initial={{
+        opacity: 0,
+        translateX: i % 2 === 0 ? -80 : 80
+      }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 0.2, delay: i * 0.2 }}
+    >
       <article className="item__date">
         <h2 className="item__num">{day}</h2>
         <p className="item__month">jan</p>

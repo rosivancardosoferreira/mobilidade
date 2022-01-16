@@ -1,26 +1,40 @@
 import React from "react";
-import Icons from "utils/icons";
 
 // COMPONENTS
 import { LinkPrimary } from "presentation/components/Buttons/Links";
 
+// ASSETS
+import Icons from "utils/icons";
+
 // STYLES
 import { ContainerItem } from "./style";
+import { motion } from "framer-motion";
 
 interface ItemDownloadProps {
   title: string;
   description: string;
   link: string;
+  i: number;
 }
 
 // COMPONENTS
 export default function ItemDownload({
   title,
   description,
-  link
+  link,
+  i
 }: ItemDownloadProps) {
   return (
-    <ContainerItem>
+    <ContainerItem
+      as={motion.section}
+      viewport={{ once: true }}
+      initial={{
+        opacity: 0,
+        translateY: i % 2 === 0 ? -60 : 60
+      }}
+      whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
+      transition={{ duration: 0.3, delay: i * 0.2 }}
+    >
       <article className="download__item">
         {Icons.materialDownload}
         <p className="item__material__title">{title}</p>
