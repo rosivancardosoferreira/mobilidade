@@ -28,7 +28,6 @@ export default function SideMenu({ open, control }: propSideMenu) {
           </a>
         </li>
       </ul>
-      {/* <div className="infinite"></div> */}
     </ContainetAside>
   );
 }

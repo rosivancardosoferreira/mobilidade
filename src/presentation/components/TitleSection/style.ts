@@ -5,7 +5,7 @@ export const ContainerTitleSection = styled.section`
   margin-bottom: 40px;
   .title__h1 {
     color: ${props => props.theme.colors.primaryBlackDark};
-    font-family: "Montserrat", sans-serif;
+    font-family: ${props => props.theme.fonts.Montserrat};
     font-weight: 600;
     font-size: var(--f-media-large);
     .title__infinite {

@@ -1,13 +1,13 @@
 import React from "react";
 
 // COMPONENTS
-import TitleSection from "../TitleSection";
-import { LinkSecondary } from "../Buttons/Links";
+import TitleSection from "presentation/components/TitleSection";
+import { LinkSecondary } from "presentation/components/Buttons/Links";
 
 // STYLES
 import { ContainerSubscription } from "./style";
 
-export default function Subscription() {
+export function Subscription() {
   return (
     <ContainerSubscription id="subscription">
       <TitleSection title="Inscrição" />

@@ -7,7 +7,7 @@ const BtnPrimary = css`
   background-color: ${props => props.theme.colors.lightBlue};
   color: ${props => props.theme.colors.primaryWhite};
   font-size: var(--f-normal);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: ${props => props.theme.fonts.SourceSansPro};
   font-weight: 600;
   /* border: 2px solid ${props => props.theme.colors.blueDark}; */
 `;
@@ -16,7 +16,7 @@ const BtnSecondary = css`
   background-color: ${props => props.theme.colors.primaryRed};
   color: ${props => props.theme.colors.primaryWhite};
   font-size: var(--f-normal);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: ${props => props.theme.fonts.SourceSansPro};
   font-weight: 600;
   border: 2px solid ${props => props.theme.colors.primaryRed};
   border-radius: 20px;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const ContainerAboutEvent = styled.section`
   grid-column: 1 / 4;
   width: 100%;
@@ -6,7 +7,7 @@ export const ContainerAboutEvent = styled.section`
   .about__description {
     color: ${props => props.theme.colors.primaryBlackDark};
     font-size: var(--f-media);
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: ${props => props.theme.fonts.SourceSansPro};
     line-height: 2rem;
   }
 

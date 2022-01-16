@@ -5,7 +5,8 @@ export const GridSection = css`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     column-gap: 16px;
     margin: 0 auto;
   }
@@ -18,7 +19,8 @@ export const GridSection = css`
   @media screen and (min-width: 1024px) {
     max-width: var(--max-width-desktop);
     grid-template-columns: repeat(12, 1fr);
-    padding: 0 72px;
+    padding-left: 72px;
+    padding-right: 72px;
   }
 `;
 
@@ -27,11 +29,13 @@ export const SectionNormal = css`
   width: 100%;
   margin: 0 auto;
   @media screen and (min-width: 0) {
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   @media screen and (min-width: 1024px) {
     max-width: var(--max-width-desktop);
-    padding: 0 72px;
+    padding-left: 72px;
+    padding-right: 72px;
   }
 `;

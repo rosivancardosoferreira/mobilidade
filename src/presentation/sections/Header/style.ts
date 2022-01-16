@@ -23,7 +23,7 @@ export const HeaderContainer = styled.header<propsHeader>`
   background-color: ${props => props.theme.colors.primaryWhite};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: ${props => props.theme.fonts.SourceSansPro};
   width: 100%;
   grid-column: 1 / 4;
   .l-background {

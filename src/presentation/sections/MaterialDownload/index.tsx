@@ -4,13 +4,13 @@ import React from "react";
 import Materiais from "utils/materiais";
 
 // COMPONENTS
-import TitleSection from "../TitleSection";
+import TitleSection from "presentation/components/TitleSection";
 import ItemDownload from "./ItemDownload";
 
 // STYLES
 import { ContainerMaterialDownload, ContainerItemsMap } from "./style";
 
-export default function MaterialDownload() {
+export function MaterialDownload() {
   return (
     <ContainerMaterialDownload>
       <TitleSection title="Materiais disponíveis" />

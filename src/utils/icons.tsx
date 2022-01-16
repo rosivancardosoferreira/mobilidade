@@ -150,6 +150,28 @@ const Icons = {
         fill="white"
       />
     </svg>
+  ),
+  doubleArrows: (
+    <svg
+      width="22"
+      height="25"
+      viewBox="0 0 22 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.3977 7.10966L10.5036 7.20854L10.6061 7.10607L17.5068 0.205296L21.2777 3.50482L10.4973 13.7952L0.196568 4.47556L3.02681 0.230204L10.3977 7.10966Z"
+        fill="#FEBF2C"
+        stroke="black"
+        strokeWidth="0.3"
+      />
+      <path
+        d="M10.3977 18.1097L10.5036 18.2085L10.6061 18.1061L17.5068 11.2053L21.2777 14.5048L10.4973 24.7952L0.196568 15.4756L3.02681 11.2302L10.3977 18.1097Z"
+        fill="#FEBF2C"
+        stroke="black"
+        strokeWidth="0.3"
+      />
+    </svg>
   )
 
   // aqui pra baixo tudo velho

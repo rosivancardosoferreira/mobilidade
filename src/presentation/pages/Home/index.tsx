@@ -1,22 +1,25 @@
 import React from "react";
 
-// ASSETS
-
-// STYLES
-import BannerInfo from "presentation/components/BannerInfo";
-import AboutEvent from "presentation/components/AboutEvent";
-import Subscription from "presentation/components/Subscription";
-import Schedule from "presentation/components/Schedule";
-import MaterialDownload from "presentation/components/MaterialDownload";
+import {
+  Header,
+  AboutEvent,
+  BannerInfo,
+  MaterialDownload,
+  Schedule,
+  Subscription,
+  Footer
+} from "presentation/sections";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <BannerInfo />
       <AboutEvent />
       <Subscription />
       <Schedule />
       <MaterialDownload />
+      <Footer />
     </>
   );
 }

@@ -14,7 +14,7 @@ export const ContainerItem = styled.section`
     .item__material__title {
       color: ${props => props.theme.colors.secondaryBlack};
       font-size: var(--f-normal);
-      font-family: "Montserrat", sans-serif;
+      font-family: ${props => props.theme.fonts.Montserrat};
       font-weight: 600;
       margin-top: 15px;
       text-align: center;
@@ -23,7 +23,7 @@ export const ContainerItem = styled.section`
     .item__material__description {
       color: ${props => props.theme.colors.primaryBlackDark};
       font-size: var(--f-smal);
-      font-family: "Montserrat", sans-serif;
+      font-family: ${props => props.theme.fonts.Montserrat};
       margin-top: 15px;
       line-height: 1.3rem;
 

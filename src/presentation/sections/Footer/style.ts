@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SectionNormal } from "styles/shared";
-export const ContainerFooter = styled.section`
+export const ContainerFooter = styled.footer`
   grid-column: 1 / 4;
   .footer__first__part {
     ${SectionNormal}
@@ -9,7 +9,7 @@ export const ContainerFooter = styled.section`
     .footer__title {
       color: ${props => props.theme.colors.blueDark};
       font-size: var(--f-normal);
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: ${props => props.theme.fonts.SourceSansPro};
       font-weight: 600;
       margin-bottom: 20px;
       display: block;
@@ -96,13 +96,13 @@ export const ContainerFooter = styled.section`
       justify-content: center;
       gap: 3px;
       padding: 12px;
-      
+
       .footer__description,
       .footer__dev {
         text-align: center;
         color: ${props => props.theme.colors.primaryWhite};
         font-size: var(--f-normal);
-        font-family: "Source Sans Pro", sans-serif;
+        font-family: ${props => props.theme.fonts.SourceSansPro};
       }
     }
   }
@@ -116,4 +116,5 @@ export const ContainerFooter = styled.section`
       align-items: center;
       flex-direction: column;
     }
+  }
 `;

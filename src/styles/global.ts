@@ -24,12 +24,11 @@ export default createGlobalStyle`
   }
   a {
     text-decoration: none;
-
   }
 
   /*
-  font-family: "Montserrat", sans-serif;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: ${props => props.theme.fonts.Montserrat};
+  font-family: ${props => props.theme.fonts.SourceSansPro};
   */
 
   body {

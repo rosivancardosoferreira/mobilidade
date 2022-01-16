@@ -9,7 +9,7 @@ import Icons from "utils/icons";
 // STYLES
 import { ContainerFooter } from "./style";
 
-export default function Footer() {
+export function Footer() {
   return (
     <ContainerFooter>
       <div className="footer__first__part">

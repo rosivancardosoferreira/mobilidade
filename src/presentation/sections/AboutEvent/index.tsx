@@ -1,15 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // COMPONENTS
-import TitleSection from "../TitleSection";
+import TitleSection from "../../components/TitleSection";
+import { Example } from "./Example";
 
 // STYLES
 import { ContainerAboutEvent } from "./style";
 
-export default function AboutEvent() {
+export function AboutEvent() {
   return (
-    <ContainerAboutEvent id="about">
+    <ContainerAboutEvent id="about" as={motion.section}>
       <TitleSection title="Sobre o evento" />
+      <Example />
       <p className="about__description">
         O evento visa debater sobre um tema atual em todas as cidades, que é a
         mobilidade urbana. Essa parece ser uma alternativa para melhorar a

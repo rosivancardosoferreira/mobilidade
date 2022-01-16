@@ -5,10 +5,10 @@ import { ContainerSchedule, ContainerItemsMap } from "./style";
 
 import Schedules from "utils/schedules";
 // COMPONENTS
-import TitleSection from "../TitleSection";
+import TitleSection from "presentation/components/TitleSection";
 import ItemSchedule from "./ItemSchedule";
 
-export default function Schedule() {
+export function Schedule() {
   return (
     <ContainerSchedule id="schedule">
       <TitleSection title="Programação" />

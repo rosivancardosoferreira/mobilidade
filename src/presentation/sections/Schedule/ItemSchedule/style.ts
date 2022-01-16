@@ -8,7 +8,7 @@ export const ContainerItem = styled.section`
     width: fit-content;
     background-color: ${props => props.theme.colors.primaryBlack};
     color: ${props => props.theme.colors.primaryWhite};
-    font-family: "Montserrat", sans-serif;
+    font-family: ${props => props.theme.fonts.Montserrat};
     padding: 0 38px;
     display: flex;
     flex-direction: column;
@@ -38,19 +38,19 @@ export const ContainerItem = styled.section`
       width: 90%;
       .item__title_activity {
         color: ${props => props.theme.colors.lightBlue};
-        font-family: "Source Sans Pro", sans-serif;
+        font-family: ${props => props.theme.fonts.SourceSansPro};
         font-size: var(--f-normal);
         font-weight: 600;
       }
       .item__people {
         color: ${props => props.theme.colors.primaryBlack};
-        font-family: "Source Sans Pro", sans-serif;
+        font-family: ${props => props.theme.fonts.SourceSansPro};
         font-size: var(--f-normal);
       }
 
       .item__activity_description {
         color: ${props => props.theme.colors.primaryBlack};
-        font-family: "Source Sans Pro", sans-serif;
+        font-family: ${props => props.theme.fonts.SourceSansPro};
         font-size: var(--f-smal);
         transition: all 0.5s;
       }
@@ -69,7 +69,7 @@ export const ContainerItem = styled.section`
         padding: 5px 10px;
         .item__time_desc {
           color: ${props => props.theme.colors.primaryBlack};
-          font-family: "Source Sans Pro", sans-serif;
+          font-family: ${props => props.theme.fonts.SourceSansPro};
           font-size: var(--f-normal);
           font-weight: 600;
           margin-left: 5px;

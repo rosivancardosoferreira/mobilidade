@@ -18,6 +18,18 @@ const Images = {
   Fapeam: {
     src: "/static/images/fapeam.png",
     alt: "Logo FAPEAM"
+  },
+  LogoTema: {
+    src: "/static/images/LOGO_TEMA.png",
+    alt: "Logo com tema"
+  },
+  LogoTemaTablet: {
+    src: "/static/images/LOGO_TEMA_TABLET.png",
+    alt: "Logo com tema"
+  },
+  LogoTemaMobile: {
+    src: "/static/images/LOGO_TEMA_MOBILE.png",
+    alt: "Logo com tema"
   }
 };
 

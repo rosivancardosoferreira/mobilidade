@@ -11,6 +11,11 @@ const theme = {
     primaryRed: "#D8146E",
     primaryPurple: "#84168B",
     primaryGreen: "#366829"
+  },
+  fonts: {
+    Montserrat: "Montserrat, sans-serif",
+    SourceSansPro: "Source Sans Pro, sans-serif",
+    ArchivoBlack: "Archivo Black, sans-serif"
   }
 };
 

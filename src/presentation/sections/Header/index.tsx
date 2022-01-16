@@ -3,7 +3,7 @@ import { HeaderContainer } from "./style";
 import Images from "utils/images";
 import SideMenu from "./SideMenu";
 
-export default function Header() {
+export function Header() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     document.body.style.overflowY = open ? "hidden" : "auto";

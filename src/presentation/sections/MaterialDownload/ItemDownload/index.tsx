@@ -2,7 +2,7 @@ import React from "react";
 import Icons from "utils/icons";
 
 // COMPONENTS
-import { LinkPrimary } from "../../Buttons/Links";
+import { LinkPrimary } from "../../../components/Buttons/Links";
 
 // STYLES
 import { ContainerItem } from "./style";
