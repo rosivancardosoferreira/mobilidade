@@ -192,7 +192,7 @@ export function FormTeste() {
         )}
       /> */}
 
-      <form name="fileForm" action="POST" data-netlify="true">
+      <form name="fileForm" data-netlify="true">
         <p>
           <label>
             <span>Name:</span>
