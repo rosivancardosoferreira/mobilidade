@@ -37,9 +37,17 @@ export function FormTeste() {
       console.log("call api");
       console.log(formName);
       console.log(options);
+
       let body = { "form-name": formName, ...values };
-      const headers = { "Content-Type": "application/x-www-form-urlencoded" };
-      body = querystring.stringify(body);
+
+      console.log("POSSUE ARQUIVOS");
+      const formData = new FormData();
+      Object.entries(body).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const headers = { "Content-Type": "multipart/form-data" };
+      body = new URLSearchParams(formData).toString();
       return fetch("/", { method: "POST", headers, body });
     };
 
