@@ -41,7 +41,7 @@ export function FormTeste() {
       let body = { "form-name": formName, ...values };
 
       console.log("POSSUE ARQUIVOS");
-      const formData = new FormData();
+      const formData: any = new FormData();
       Object.entries(body).forEach(([key, value]) => {
         formData.append(key, value);
       });
