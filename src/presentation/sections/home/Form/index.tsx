@@ -93,7 +93,7 @@ export function FormTeste() {
               )}
             </Field>
 
-            <Field type="file" name="arquivo">
+            <Field name="arquivo">
               {({ input, meta }) => (
                 <>
                   <div
@@ -104,6 +104,7 @@ export function FormTeste() {
                     <div className="file">
                       <input
                         {...input}
+                        type="file"
                         id="analisisFile"
                         // onChange={(e) => {
                         //   input.onChange(e)
