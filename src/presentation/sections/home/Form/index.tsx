@@ -38,22 +38,29 @@ export function FormTeste() {
       console.log(formName);
       console.log(options);
 
-      const body = { "form-name": formName, ...values };
+      let body = { "form-name": formName, ...values };
 
       console.log("POSSUE ARQUIVOS");
       const formData: any = new FormData();
       Object.entries(body).forEach(([key, value]) => {
+        console.log("\n\n\n\n\n\n\n\n\n\n\n");
+        console.log(key);
+        console.log("\n\n\n\n\n\n\n\n\n\n\n");
+        console.log(value);
+        console.log("\n\n\n\n\n\n\n\n\n\n\n");
         formData.append(key, value);
       });
 
       const headers = { "Content-Type": "multipart/form-data" };
-      // body = new URLSearchParams(formData).toString();
+      body = new URLSearchParams(formData).toString();
+      console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
+      console.log(body);
       return fetch("/", { method: "POST", headers, body });
     };
 
   async function onSubmit(values: any, form: any) {
     console.log("requisição");
-    await formSubmit("contact", { hasFile: true })(values);
+    await formSubmit("contact")(values);
     console.log("passou da requisição");
     setInfosFile({ name: "", size: "" });
     form.reset();
@@ -68,7 +75,12 @@ export function FormTeste() {
         validate={validate}
         onSubmit={onSubmit}
         render={({ handleSubmit, form }) => (
-          <form name="contact" data-netlify="true" onSubmit={handleSubmit}>
+          <form
+            name="contact"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+            encType="multipart/form-data"
+          >
             <input type="hidden" name="form-name" value="contact" />
 
             <Field name="nome">
