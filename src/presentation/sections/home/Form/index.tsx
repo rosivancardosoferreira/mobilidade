@@ -78,13 +78,12 @@ export function FormTeste() {
         onSubmit={onSubmit}
         render={({ handleSubmit, form }) => (
           <form
-            name="new-contact"
+            name="teste"
             action="/thanks/"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            <input type="hidden" name="form-name" value="new-contact" />
+            <input type="hidden" name="form-name" value="teste" />
 
             <Field name="nome">
               {({ input, meta }) => (
@@ -126,9 +125,7 @@ export function FormTeste() {
                         //   handleChangeFile(e, form)
                         // }}
                       />
-                      <label htmlFor="analisisFile">
-                        Anexar fatura de energia*
-                      </label>
+                      <label htmlFor="analisisFile">Aquivo</label>
                       <p
                         className={
                           (meta.error && meta.touched) || alertSizeFile
