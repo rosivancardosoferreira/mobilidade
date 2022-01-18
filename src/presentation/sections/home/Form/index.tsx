@@ -232,6 +232,8 @@ export function FormTeste() {
       <h1>File Upload</h1>
       <form
         name="file-upload"
+        method="post"
+        action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
