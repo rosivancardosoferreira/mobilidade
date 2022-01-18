@@ -42,6 +42,7 @@ export function FormTeste() {
 
       console.log("POSSUE ARQUIVOS");
       const formData: any = new FormData();
+
       Object.entries(body).forEach(([key, value]) => {
         console.log("\n\n\n\n\n\n\n\n\n\n\n");
         console.log(key);
@@ -51,11 +52,12 @@ export function FormTeste() {
         formData.append(key, value);
       });
 
-      const headers = { "Content-Type": "multipart/form-data" };
-      body = new URLSearchParams(formData).toString();
+      // const headers = { "Content-Type": "multipart/form-data" };
+      body = formData;
       console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
       console.log(body);
-      return fetch("/", { method: "POST", headers, body });
+      // return fetch("/", { method: "POST", body });
+      return fetch("http://192.168.0.14:3000", { method: "POST", body });
     };
 
   async function onSubmit(values: any, form: any) {
@@ -68,31 +70,6 @@ export function FormTeste() {
       form.resetFieldState(key);
     });
   }
-
-  const [state, setState] = React.useState({});
-
-  const handleChange = (e: any) => {
-    setState({ ...state, [e.target.name]: e.target.value });
-  };
-
-  const handleAttachment = (e: any) => {
-    setState({ ...state, [e.target.name]: e.target.files[0] });
-  };
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    let encode: any;
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state
-      })
-    })
-      .then(() => alert("sucesso"))
-      .catch(() => alert("erro"));
-  };
 
   return (
     <Teste>
@@ -175,7 +152,7 @@ export function FormTeste() {
                       <p className="file-name">{infosFile.name}</p>
                       <p className="file-size">{infosFile.size} kb</p>
                     </div>
-                    <button
+                    {/* <button
                       onClick={() => {
                         form.change("arquivo", undefined);
                         console.log("limpar aquivo");
@@ -183,7 +160,7 @@ export function FormTeste() {
                       }}
                     >
                       TESTE
-                    </button>
+                    </button> */}
                   </div>
                 </>
               )}
