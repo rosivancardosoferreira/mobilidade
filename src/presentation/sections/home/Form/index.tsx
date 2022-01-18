@@ -193,6 +193,8 @@ export function FormTeste() {
       /> */}
 
       <form name="fileForm" data-netlify="true">
+        <input type="hidden" name="form-name" value="FILEES" />
+
         <p>
           <label>
             <span>Name:</span>
