@@ -25,7 +25,7 @@ const validate = (values: Props) => {
 export function FormTeste() {
   const [enviado, setEnviado] = useState(false);
 
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef: any = useRef(null);
 
   const [infosFile, setInfosFile] = useState({
     name: "",
@@ -41,10 +41,11 @@ export function FormTeste() {
     // formData.append(key, value);
     // });
 
-    const body = formRef.current ? new FormData(formRef.current) : "";
+    const body = new FormData(formRef.current);
     const headers = { "Content-Type": "multipart/form-data" };
     // body = new URLSearchParams(formData);
 
+    console.log(formRef.current);
     console.log(body);
 
     return fetch("/", { method: "POST", headers, body });
