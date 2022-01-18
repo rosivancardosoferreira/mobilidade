@@ -57,7 +57,7 @@ export function FormTeste() {
       console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
       console.log(body);
       // return fetch("/", { method: "POST", body });
-      return fetch("http://192.168.0.14:3000", { method: "POST", body });
+      return fetch("/", { method: "POST", body });
     };
 
   async function onSubmit(values: any, form: any) {
