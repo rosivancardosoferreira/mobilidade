@@ -31,33 +31,33 @@ export function FormTeste() {
   });
   const [alertSizeFile, setAlertSizeFile] = useState(false);
 
-  const formSubmit =
-    (formName: any, options: any = {}) =>
-    (values: any) => {
-      console.log("call api");
-      console.log(formName);
-      console.log(options);
+  const formSubmit = (formName: any) => (values: any) => {
+    console.log(formName);
+    let body = { "form-name": formName, ...values };
+    console.log("<<<<<<<<<<<<<<<<<<<<<<<VALUES\n\n\n\n\n");
+    console.log(values);
+    console.log("\n\n\n\n\nVALUES<<<<<<<<<<<<<<<<<<<<<<<");
+    const formData: any = new FormData();
 
-      let body = { "form-name": formName, ...values };
+    Object.entries(body).forEach((key, value) => {
+      console.log("\n\n\n\n\n\n\n\n\n\n\n");
+      console.log(key);
+      console.log(value);
+      console.log("\n\n\n\n\n\n\n\n\n\n\n");
+      formData.append(key, value);
+    });
 
-      const formData: any = new FormData();
-
-      Object.entries(body).forEach(([key, value]) => {
-        console.log("\n\n\n\n\n\n\n\n\n\n\n");
-        console.log(key);
-        console.log("\n\n\n\n\n\n\n\n\n\n\n");
-        console.log(value);
-        console.log("\n\n\n\n\n\n\n\n\n\n\n");
-        formData.append(key, value);
-      });
-
-      const headers = { "Content-Type": "multipart/form-data" };
-      body = new URLSearchParams(formData);
-      console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
-      console.log(body);
-      return fetch("/", { method: "POST", headers, body });
-      // return fetch("http://192.168.0.14:3000", { method: "POST", body });
-    };
+    const headers = { "Content-Type": "multipart/form-data" };
+    body = new URLSearchParams(formData);
+    console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
+    console.log(body);
+    return fetch("/", { method: "POST", headers, body });
+    // return fetch("http://192.168.0.14:3000", {
+    //   method: "POST",
+    //   headers,
+    //   body
+    // });
+  };
 
   async function onSubmit(values: any, form: any) {
     console.log("requisição");
@@ -166,7 +166,7 @@ export function FormTeste() {
                 <div className="message-newslatter">
                   <input
                     {...input}
-                    type="email"
+                    type="text"
                     className="input"
                     placeholder="E-mail"
                   />
