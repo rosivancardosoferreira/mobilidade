@@ -56,8 +56,8 @@ export function FormTeste() {
       body = formData;
       console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
       console.log(body);
-      // return fetch("/", { method: "POST", body });
       return fetch("/", { method: "POST", body });
+      // return fetch("http://192.168.0.14:3000", { method: "POST", body });
     };
 
   async function onSubmit(values: any, form: any) {
@@ -77,13 +77,8 @@ export function FormTeste() {
         validate={validate}
         onSubmit={onSubmit}
         render={({ handleSubmit, form }) => (
-          <form
-            name="teste"
-            action="/thanks/"
-            data-netlify="true"
-            onSubmit={handleSubmit}
-          >
-            <input type="hidden" name="form-name" value="teste" />
+          <form name="form-pega" data-netlify="true" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="form-pega" />
 
             <Field name="nome">
               {({ input, meta }) => (

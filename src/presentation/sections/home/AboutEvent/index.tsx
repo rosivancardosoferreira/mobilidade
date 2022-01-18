@@ -11,6 +11,23 @@ import { animation } from "utils/animations";
 export function AboutEvent() {
   return (
     <ContainerAboutEvent id="about">
+      <form name="fileForm" data-netlify="true">
+        <p>
+          <label>
+            <span>Name:</span>
+            <input name="name" type="text" />
+          </label>
+        </p>
+        <p>
+          <label>
+            <span>Add file:</span>
+            <input name="file" type="file" />
+          </label>
+        </p>
+        <button>Submit</button>
+      </form>
+      <p className="result"></p>
+
       <TitleSection title="Sobre o evento" />
       <motion.p
         className="about__description"
