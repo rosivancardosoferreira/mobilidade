@@ -64,7 +64,7 @@ export function FormTeste() {
 
   return (
     <Teste>
-      {/* <Form
+      <Form
         validate={validate}
         onSubmit={onSubmit}
         render={({ handleSubmit, form }) => (
@@ -190,26 +190,7 @@ export function FormTeste() {
             )}
           </form>
         )}
-      /> */}
-
-      <form name="fileForm" data-netlify="true">
-        <input type="hidden" name="form-name" value="FILEES" />
-
-        <p>
-          <label>
-            <span>Name:</span>
-            <input name="name" type="text" />
-          </label>
-        </p>
-        <p>
-          <label>
-            <span>Add file:</span>
-            <input name="file" type="file" />
-          </label>
-        </p>
-        <button>Submit</button>
-      </form>
-      <p className="result"></p>
+      />
     </Teste>
   );
 }
