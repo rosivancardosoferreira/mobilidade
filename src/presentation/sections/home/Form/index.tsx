@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Teste } from "./styles";
 import { Form, Field } from "react-final-form";
 import querystring from "qs";
@@ -25,6 +25,8 @@ const validate = (values: Props) => {
 export function FormTeste() {
   const [enviado, setEnviado] = useState(false);
 
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [infosFile, setInfosFile] = useState({
     name: "",
     size: ""
@@ -32,25 +34,19 @@ export function FormTeste() {
   const [alertSizeFile, setAlertSizeFile] = useState(false);
 
   const formSubmit = (formName: any) => (values: any) => {
-    console.log(formName);
-    let body = { "form-name": formName, ...values };
-    console.log("<<<<<<<<<<<<<<<<<<<<<<<VALUES\n\n\n\n\n");
-    console.log(values);
-    console.log("\n\n\n\n\nVALUES<<<<<<<<<<<<<<<<<<<<<<<");
-    const formData: any = new FormData();
+    // let body = { "form-name": formName, ...values };
+    // const formData: any = new FormData();
 
-    Object.entries(body).forEach((key, value) => {
-      console.log("\n\n\n\n\n\n\n\n\n\n\n");
-      console.log(key);
-      console.log(value);
-      console.log("\n\n\n\n\n\n\n\n\n\n\n");
-      formData.append(key, value);
-    });
+    // Object.entries(body).forEach((key, value) => {
+    // formData.append(key, value);
+    // });
 
+    const body = formRef.current ? new FormData(formRef.current) : "";
     const headers = { "Content-Type": "multipart/form-data" };
-    body = new URLSearchParams(formData);
-    console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
+    // body = new URLSearchParams(formData);
+
     console.log(body);
+
     return fetch("/", { method: "POST", headers, body });
     // return fetch("http://192.168.0.14:3000", {
     //   method: "POST",
@@ -80,6 +76,7 @@ export function FormTeste() {
             name="novo-formulario"
             data-netlify="true"
             onSubmit={handleSubmit}
+            ref={formRef}
           >
             <input type="hidden" name="form-name" value="novo-formulario" />
 
