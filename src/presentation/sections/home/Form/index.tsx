@@ -38,7 +38,7 @@ export function FormTeste() {
       console.log(formName);
       console.log(options);
 
-      let body = { "form-name": formName, ...values };
+      const body = { "form-name": formName, ...values };
 
       console.log("POSSUE ARQUIVOS");
       const formData: any = new FormData();
@@ -47,7 +47,7 @@ export function FormTeste() {
       });
 
       const headers = { "Content-Type": "multipart/form-data" };
-      body = new URLSearchParams(formData).toString();
+      // body = new URLSearchParams(formData).toString();
       return fetch("/", { method: "POST", headers, body });
     };
 
