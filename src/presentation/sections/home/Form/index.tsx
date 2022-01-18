@@ -96,17 +96,18 @@ export function FormTeste() {
 
   return (
     <Teste>
-      {/* <Form
+      <Form
         validate={validate}
         onSubmit={onSubmit}
         render={({ handleSubmit, form }) => (
           <form
-            name="contact"
+            name="new-contact"
+            action="/thanks/"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
-            encType="multipart/form-data"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="new-contact" />
 
             <Field name="nome">
               {({ input, meta }) => (
@@ -227,9 +228,9 @@ export function FormTeste() {
             )}
           </form>
         )}
-      /> */}
+      />
 
-      <h1>File Upload</h1>
+      {/* <h1>File Upload</h1>
       <form
         name="file-upload"
         method="post"
@@ -238,7 +239,6 @@ export function FormTeste() {
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="file-upload" />
         <p hidden>
           <label>
@@ -266,7 +266,7 @@ export function FormTeste() {
         <p>
           Note: multiple file uploads are not supported by Netlify at this time.
         </p>
-      </form>
+      </form> */}
     </Teste>
   );
 }
