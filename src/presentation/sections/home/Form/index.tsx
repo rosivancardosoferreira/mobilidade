@@ -34,26 +34,11 @@ export function FormTeste() {
   const [alertSizeFile, setAlertSizeFile] = useState(false);
 
   const formSubmit = (formName: any) => (values: any) => {
-    // let body = { "form-name": formName, ...values };
-    // const formData: any = new FormData();
-
-    // Object.entries(body).forEach((key, value) => {
-    // formData.append(key, value);
-    // });
-
     const body = new FormData(formRef.current);
     const headers = { "Content-Type": "multipart/form-data" };
-    // body = new URLSearchParams(formData);
-
     console.log(formRef.current);
     console.log(body);
-
     return fetch("/", { method: "POST", headers, body });
-    // return fetch("http://192.168.0.14:3000", {
-    //   method: "POST",
-    //   headers,
-    //   body
-    // });
   };
 
   async function onSubmit(values: any, form: any) {
@@ -74,12 +59,12 @@ export function FormTeste() {
         onSubmit={onSubmit}
         render={({ handleSubmit, form }) => (
           <form
-            name="novo-formulario"
+            name="rosivanForm"
             data-netlify="true"
             onSubmit={handleSubmit}
             ref={formRef}
           >
-            <input type="hidden" name="form-name" value="novo-formulario" />
+            <input type="hidden" name="form-name" value="rosivanForm" />
 
             <Field name="nome">
               {({ input, meta }) => (
