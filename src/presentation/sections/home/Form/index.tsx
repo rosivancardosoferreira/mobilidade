@@ -33,7 +33,8 @@ export function FormTeste() {
 
   const formSubmit =
     (formName: any, options: any = {}) =>
-    (values: any) => {
+    (values: any) =>
+    (form: any) => {
       console.log("call api");
       console.log(formName);
       console.log(options);
@@ -41,29 +42,30 @@ export function FormTeste() {
       let body = { "form-name": formName, ...values };
 
       console.log("POSSUE ARQUIVOS");
-      const formData: any = new FormData();
+      // const formData: any = new FormData();
 
-      Object.entries(body).forEach(([key, value]) => {
-        console.log("\n\n\n\n\n\n\n\n\n\n\n");
-        console.log(key);
-        console.log("\n\n\n\n\n\n\n\n\n\n\n");
-        console.log(value);
-        console.log("\n\n\n\n\n\n\n\n\n\n\n");
-        formData.append(key, value);
-      });
+      // Object.entries(body).forEach(([key, value]) => {
+      //   console.log("\n\n\n\n\n\n\n\n\n\n\n");
+      //   console.log(key);
+      //   console.log("\n\n\n\n\n\n\n\n\n\n\n");
+      //   console.log(value);
+      //   console.log("\n\n\n\n\n\n\n\n\n\n\n");
+      //   formData.append(key, value);
+      // });
 
-      // const headers = { "Content-Type": "multipart/form-data" };
+      const headers = { "Content-Type": "multipart/form-data" };
       // body = formData;
-      body = new URLSearchParams(formData);
+      // body = new URLSearchParams(formData);
+      body = new FormData(form.target);
       console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
       console.log(body);
-      return fetch("/", { method: "POST", body });
+      return fetch("/", { method: "POST", headers, body });
       // return fetch("http://192.168.0.14:3000", { method: "POST", body });
     };
 
   async function onSubmit(values: any, form: any) {
     console.log("requisição");
-    await formSubmit("contact")(values);
+    await formSubmit("contact")(values)(form);
     console.log("passou da requisição");
     setInfosFile({ name: "", size: "" });
     form.reset();
