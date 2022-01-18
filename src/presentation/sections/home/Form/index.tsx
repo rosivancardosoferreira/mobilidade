@@ -204,7 +204,7 @@ export function FormTeste() {
         )}
       /> */}
 
-      <form name="contact-form" method="POST">
+      <form name="contact-form">
         <input type="hidden" name="form-name" value="contact-form" />
         <label htmlFor="name">Name *</label>
         <input id="name" name="name" required type="text" />
