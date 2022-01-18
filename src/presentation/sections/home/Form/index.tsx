@@ -53,7 +53,8 @@ export function FormTeste() {
       });
 
       // const headers = { "Content-Type": "multipart/form-data" };
-      body = formData;
+      // body = formData;
+      body = new URLSearchParams(formData);
       console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
       console.log(body);
       return fetch("/", { method: "POST", body });
