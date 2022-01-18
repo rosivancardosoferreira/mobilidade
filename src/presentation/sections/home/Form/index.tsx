@@ -65,7 +65,7 @@ export function FormTeste() {
 
   async function onSubmit(values: any, form: any) {
     console.log("requisição");
-    await formSubmit("contact")(values)(form);
+    await formSubmit("novo-formulario")(values)(form);
     console.log("passou da requisição");
     setInfosFile({ name: "", size: "" });
     form.reset();
@@ -79,9 +79,12 @@ export function FormTeste() {
       <Form
         validate={validate}
         onSubmit={onSubmit}
-        name="novo-formulario"
         render={({ handleSubmit, form }) => (
-          <form data-netlify="true" onSubmit={handleSubmit}>
+          <form
+            name="novo-formulario"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+          >
             <input type="hidden" name="form-name" value="novo-formulario" />
 
             <Field name="nome">
