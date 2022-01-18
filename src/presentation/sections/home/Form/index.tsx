@@ -79,9 +79,10 @@ export function FormTeste() {
       <Form
         validate={validate}
         onSubmit={onSubmit}
+        name="novo-formulario"
         render={({ handleSubmit, form }) => (
-          <form name="form-pega" data-netlify="true" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="form-pega" />
+          <form data-netlify="true" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="novo-formulario" />
 
             <Field name="nome">
               {({ input, meta }) => (
