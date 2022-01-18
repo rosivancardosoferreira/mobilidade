@@ -33,30 +33,26 @@ export function FormTeste() {
 
   const formSubmit =
     (formName: any, options: any = {}) =>
-    (values: any) =>
-    (form: any) => {
+    (values: any) => {
       console.log("call api");
       console.log(formName);
       console.log(options);
 
       let body = { "form-name": formName, ...values };
 
-      console.log("POSSUE ARQUIVOS");
-      // const formData: any = new FormData();
+      const formData: any = new FormData();
 
-      // Object.entries(body).forEach(([key, value]) => {
-      //   console.log("\n\n\n\n\n\n\n\n\n\n\n");
-      //   console.log(key);
-      //   console.log("\n\n\n\n\n\n\n\n\n\n\n");
-      //   console.log(value);
-      //   console.log("\n\n\n\n\n\n\n\n\n\n\n");
-      //   formData.append(key, value);
-      // });
+      Object.entries(body).forEach(([key, value]) => {
+        console.log("\n\n\n\n\n\n\n\n\n\n\n");
+        console.log(key);
+        console.log("\n\n\n\n\n\n\n\n\n\n\n");
+        console.log(value);
+        console.log("\n\n\n\n\n\n\n\n\n\n\n");
+        formData.append(key, value);
+      });
 
       const headers = { "Content-Type": "multipart/form-data" };
-      // body = formData;
-      // body = new URLSearchParams(formData);
-      body = new FormData(form.target);
+      body = new URLSearchParams(formData);
       console.log("\n\n\n\n\n\n\n\n\n\n\nBODY");
       console.log(body);
       return fetch("/", { method: "POST", headers, body });
@@ -65,7 +61,7 @@ export function FormTeste() {
 
   async function onSubmit(values: any, form: any) {
     console.log("requisição");
-    await formSubmit("novo-formulario")(values)(form);
+    await formSubmit("novo-formulario")(values);
     console.log("passou da requisição");
     setInfosFile({ name: "", size: "" });
     form.reset();
