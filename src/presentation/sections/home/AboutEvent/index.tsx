@@ -12,6 +12,7 @@ export function AboutEvent() {
   return (
     <ContainerAboutEvent id="about">
       <form name="fileForm" data-netlify="true">
+        <input type="hidden" name="form-name" value="fileForm" />
         <p>
           <label>
             <span>Name:</span>
