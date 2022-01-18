@@ -62,6 +62,7 @@ export function FormTeste() {
             name="rosivanForm"
             data-netlify="true"
             onSubmit={handleSubmit}
+            encType="multipart/form-data"
             ref={formRef}
           >
             <input type="hidden" name="form-name" value="rosivanForm" />
