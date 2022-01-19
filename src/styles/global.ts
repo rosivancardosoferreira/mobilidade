@@ -26,23 +26,15 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
-  /*
-  font-family: ${props => props.theme.fonts.Montserrat};
-  font-family: ${props => props.theme.fonts.SourceSansPro};
-  */
   html {
     height: -webkit-fill-available;
     scroll-behavior: smooth;
   }
-
-  body,
-  html { 
-    overflow-x: hidden;
-    :target {
-      scroll-margin-top: .8em;
-    }
-  }
   
+  section {
+    overflow-x: hidden;
+  }
+
   body {
     background: #FFFFFF;
     min-height: 100vh;

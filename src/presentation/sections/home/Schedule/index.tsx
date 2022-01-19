@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // STYLES
 import { ContainerSchedule, ContainerItemsMap } from "./style";
@@ -12,6 +12,9 @@ import ItemSchedule from "./ItemSchedule";
 export function Schedule() {
   const [showModal, setShowModal] = useState(false);
   const [peopples, setPeopples] = useState(Object);
+  useEffect(() => {
+    document.body.style.overflow = showModal ? "hidden" : "auto";
+  }, [showModal]);
   function handleModal() {
     setShowModal(!showModal);
   }

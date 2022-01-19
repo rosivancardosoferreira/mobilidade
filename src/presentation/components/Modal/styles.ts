@@ -6,7 +6,7 @@ export const BackDrop = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 `;
@@ -22,10 +22,10 @@ export const ContentModal = styled.div`
   row-gap: 20px;
   max-height: 75vh;
   padding: 1rem;
+  padding-top: 3rem;
   position: relative;
   .modal__close {
     position: fixed;
-    border: 1px solid red;
     right: 7px;
     top: 7px;
     background-color: transparent;
@@ -64,5 +64,6 @@ export const ContentModalProfile = styled.div`
     font-size: var(--f-normal);
     font-family: ${props => props.theme.fonts.SourceSansPro};
     font-weight: 400;
+    line-height: 1.8rem;
   }
 `;

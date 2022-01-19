@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export function Header() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
-    document.body.style.overflowY = open ? "hidden" : "auto";
+    document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
   function controlSibeMenu() {
     setOpen(!open);

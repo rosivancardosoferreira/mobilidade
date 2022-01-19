@@ -13,7 +13,6 @@ const BGOpen = css`
   background: rgba(0, 0, 0, 0.2);
   z-index: 1;
   opacity: 1;
-  border: 1px solid red;
 `;
 
 const BGClose = css`

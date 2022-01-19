@@ -58,6 +58,87 @@ const Schedules = [
     description:
       "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
     time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
+  },
+  {
+    day: "26",
+    title:
+      "Palestra de abertura do evento: Planejamento urbano e a dinâmica das cidades amazônicas",
+    people: [Peoples.Aline, Peoples.Ednilce, Peoples.Hidelbrando],
+    description:
+      "Geógrafa, Especialista em Engenharia Urbana, Especialista em Sistema de Informações Geográficas, Mestra em Engenharia de Transportes e Doutoranda em Engenharia de Transporte na Pontifícia Universidade Católica do Chile. É Consultora técnica em Mobilidade Urbana no IDEC (Instituto Brasileiro de Defesa do Consumidor). Tem experiência em projetos de planejamento de operações de transportes em eventos especiais (Réveillon, Copa do Mundo, Rock in Rio, Olimpíadas), além de trabalhos desenvolvidos na implantação de melhorias no sistema de transporte coletivo por ônibus (BRS - Bus Rapid Service e BRT - Bus Rapid Transit) na cidade do Rio de Janeiro.",
+    time: "14:30 às 16h"
   }
 ];
 
