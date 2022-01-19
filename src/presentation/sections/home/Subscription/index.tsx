@@ -21,9 +21,11 @@ export function Subscription() {
         transition={animation.fadeY.transition06}
       >
         A inscrição ficará disponível de
-        <strong className="sub__strong"> 06/01/2022</strong> a{" "}
-        <strong className="sub__strong">18/01/2022</strong>, clique no botão
-        abaixo para realizar sua inscrição.
+        <strong className="sub__strong">
+          {" "}
+          06/01/2022 às 00:00h do dia 26/01/2022
+        </strong>
+        , clique no botão abaixo para realizar sua inscrição.
       </motion.p>
       <LinkSecondary
         link="https://www.even3.com.br/iiseminariodemobilidade/"
