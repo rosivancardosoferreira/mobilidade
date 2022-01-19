@@ -12,7 +12,7 @@ export function BtnPrimary({ title, onClick, type }: PropsBtn) {
     <ButtonContainer
       type={type || "button"}
       onClick={onClick}
-      typeBtn="primary"
+      typebtn="primary"
       className="down btn__primary"
     >
       {title}
@@ -25,7 +25,7 @@ export function BtnSecondary({ title, onClick, type }: PropsBtn) {
     <ButtonContainer
       type={type || "button"}
       onClick={onClick}
-      typeBtn="secondary"
+      typebtn="secondary"
       className="down btn__secondary"
     >
       {title}
