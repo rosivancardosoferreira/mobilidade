@@ -11,8 +11,9 @@ const BGOpen = css`
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 0;
+  z-index: 1;
   opacity: 1;
+  border: 1px solid red;
 `;
 
 const BGClose = css`

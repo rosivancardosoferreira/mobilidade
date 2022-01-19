@@ -15,7 +15,7 @@ export function LinkPrimary({ link, title, blank, download }: PropsBtn) {
     <LinkContainer
       href={link}
       target={blank ? "_blank" : "_self"}
-      typeBtn="primary"
+      typebtn="primary"
       className="down link__primary"
       rel="noreferrer"
       download
@@ -26,7 +26,7 @@ export function LinkPrimary({ link, title, blank, download }: PropsBtn) {
     <LinkContainer
       href={link}
       target={blank ? "_blank" : "_self"}
-      typeBtn="primary"
+      typebtn="primary"
       className="down link__primary"
       rel="noreferrer"
     >
@@ -40,7 +40,7 @@ export function LinkSecondary({ link, title, blank }: PropsBtn) {
     <LinkContainer
       href={link}
       target={blank ? "_blank" : "_self"}
-      typeBtn="secondary"
+      typebtn="secondary"
       className="down btn__secondary"
       rel="noreferrer"
       as={motion.a}

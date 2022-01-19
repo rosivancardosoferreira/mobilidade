@@ -35,9 +35,6 @@ export function FormTeste() {
 
   const formSubmit = (formName: any) => (values: any) => {
     const body = new FormData(formRef.current);
-    // const headers = { "Content-Type": "multipart/form-data" };
-    console.log(formRef.current);
-    console.log(body);
     return fetch("/", { method: "POST", body });
   };
 

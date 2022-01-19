@@ -39,3 +39,21 @@ export const SectionNormal = css`
     padding-right: 72px;
   }
 `;
+
+export const RemoveScroll = css`
+  overflow: auto;
+  scrollbar-width: thin;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${props => props.theme.colors.lightBlue};
+    border-radius: 16px;
+  }
+`;

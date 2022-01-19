@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React from "react";
 import Icons from "utils/icons";
 
 // STYLES
@@ -9,20 +9,22 @@ import { ContainerItem } from "./style";
 interface ItemScheduleProps {
   day: string;
   title: string;
-  people: string;
-  description: string;
+  people: object;
   time: string;
   i: number;
+  showModal: () => void;
+  peopleAct: (val: object) => void;
 }
 export default function ItemSchedule({
   day,
   title,
   people,
-  description,
   time,
-  i
+  i,
+  showModal,
+  peopleAct
 }: ItemScheduleProps) {
-  const [expand, setExpand] = useState(false);
+  const expand = false;
   return (
     <ContainerItem
       as={motion.section}
@@ -41,7 +43,14 @@ export default function ItemSchedule({
       <article className="item__datas">
         <div className="item__datas__people">
           <h3 className="item__title_activity">{title}</h3>
-          <p className="item__people">{people}</p>
+          <div className="items__people">
+            {Object.values(people).map((elem, id) => (
+              <p className="item__people" key={id}>
+                {elem.name}
+                {id < Object.values(people).length - 1 && <span>-</span>}
+              </p>
+            ))}
+          </div>
           <p
             className={
               expand
@@ -49,7 +58,7 @@ export default function ItemSchedule({
                 : "item__activity_description item__activity_description__close"
             }
           >
-            {description}
+            descrição
           </p>
           <div className="item__time">
             {Icons.time}
@@ -62,7 +71,11 @@ export default function ItemSchedule({
               ? "item__datas__control item__datas__control__open"
               : "item__datas__control"
           }
-          onClick={() => setExpand(!expand)}
+          onClick={() => {
+            showModal();
+            peopleAct(people);
+            // alert(JSON.stringify(people));
+          }}
         >
           {Icons.control}
         </button>

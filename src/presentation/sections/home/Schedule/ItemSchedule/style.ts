@@ -42,10 +42,20 @@ export const ContainerItem = styled.section`
         font-size: var(--f-normal);
         font-weight: 600;
       }
-      .item__people {
-        color: ${props => props.theme.colors.primaryBlack};
-        font-family: ${props => props.theme.fonts.SourceSansPro};
-        font-size: var(--f-normal);
+      .items__people {
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        span {
+          margin-left: 5px;
+        }
+        .item__people {
+          color: ${props => props.theme.colors.primaryBlack};
+          font-family: ${props => props.theme.fonts.SourceSansPro};
+          font-size: var(--f-normal);
+        }
       }
 
       .item__activity_description {
@@ -83,6 +93,7 @@ export const ContainerItem = styled.section`
       .svg__control {
         cursor: pointer;
         transition: transform 0.5s;
+        transform: rotate(-180deg);
       }
     }
     .item__datas__control__open {

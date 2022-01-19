@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 interface propsButton {
-  typeBtn: "primary" | "secondary" | "send__message";
+  typebtn: "primary" | "secondary" | "send__message";
 }
 
 const BtnPrimary = css`
@@ -43,9 +43,9 @@ export const ButtonDefault = css<propsButton>`
   transition: all 0.3s;
   width: fit-content;
   text-align: center;
-  ${props => props.typeBtn === "primary" && BtnPrimary}
-  ${props => props.typeBtn === "secondary" && BtnSecondary}
-  ${props => props.typeBtn === "send__message" && BtnSendMessage}
+  ${props => props.typebtn === "primary" && BtnPrimary}
+  ${props => props.typebtn === "secondary" && BtnSecondary}
+  ${props => props.typebtn === "send__message" && BtnSendMessage}
 `;
 
 export const ButtonContainer = styled.button`

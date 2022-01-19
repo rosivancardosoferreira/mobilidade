@@ -24,6 +24,7 @@ export const ContainetAside = styled.aside<propsSideMenu>`
   ${props => (props.open ? Open : Close)};
   padding-top: calc(60px + 20px);
   z-index: 2;
+  border: 1px solid red;
   .l-aside__item {
     margin-top: 40px;
     display: flex;
