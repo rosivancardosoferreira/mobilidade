@@ -13,7 +13,7 @@ export const BackDrop = styled.div`
 
 export const ContentModal = styled.div`
   ${RemoveScroll}
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   background-color: ${props => props.theme.colors.primaryWhite};
   border-radius: 10px;
@@ -36,12 +36,18 @@ export const ContentModal = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+  @media (max-width: 500px) {
+    width: 95%;
+  }
 `;
 
 export const ContentModalProfile = styled.div`
   display: flex;
-  align-items: center;
-  column-gap: 20px;
+  column-gap: 25px;
   padding-bottom: 20px;
   border-bottom: 1px solid ${props => props.theme.colors.lightBlue};
   .profile__photo__img {
@@ -65,5 +71,16 @@ export const ContentModalProfile = styled.div`
     font-family: ${props => props.theme.fonts.SourceSansPro};
     font-weight: 400;
     line-height: 1.8rem;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    .profile__name {
+      display: block;
+      width: fit-content;
+      margin-bottom: 10px;
+    }
   }
 `;

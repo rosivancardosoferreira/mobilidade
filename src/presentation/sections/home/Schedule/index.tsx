@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // STYLES
 import { ContainerSchedule, ContainerItemsMap } from "./style";
@@ -8,13 +8,14 @@ import Schedules from "utils/schedules";
 import TitleSection from "presentation/components/TitleSection";
 import { Modal } from "presentation/components";
 import ItemSchedule from "./ItemSchedule";
+// import { blockScroll } from "utils/blockScroll";
 
 export function Schedule() {
   const [showModal, setShowModal] = useState(false);
   const [peopples, setPeopples] = useState(Object);
-  useEffect(() => {
-    document.body.style.overflow = showModal ? "hidden" : "auto";
-  }, [showModal]);
+  // useEffect(() => {
+  //   blockScroll(showModal);
+  // }, [showModal]);
   function handleModal() {
     setShowModal(!showModal);
   }

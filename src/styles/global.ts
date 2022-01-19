@@ -26,14 +26,15 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  html, body { 
+    overflow-x: hidden !important;
+  }
+
   html {
     height: -webkit-fill-available;
     scroll-behavior: smooth;
   }
-  
-  section {
-    overflow-x: hidden;
-  }
+    
 
   body {
     background: #FFFFFF;

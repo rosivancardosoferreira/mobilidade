@@ -33,7 +33,7 @@ export default function ItemDownload({
         translateY: i % 2 === 0 ? -60 : 60
       }}
       whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
-      transition={{ duration: 0.3, delay: i * 0.2 }}
+      transition={{ duration: 0.3, delay: 0.3 }}
     >
       <article className="download__item">
         {Icons.materialDownload}

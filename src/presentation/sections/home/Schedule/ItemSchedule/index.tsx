@@ -34,7 +34,7 @@ export default function ItemSchedule({
         translateX: i % 2 === 0 ? -80 : 80
       }}
       whileInView={{ opacity: 1, translateX: 0 }}
-      transition={{ duration: 0.2, delay: i * 0.2 }}
+      transition={{ duration: 0.2, delay: 0.3 }}
     >
       <article className="item__date">
         <h2 className="item__num">{day}</h2>
@@ -65,20 +65,22 @@ export default function ItemSchedule({
             <p className="item__time_desc">{time}</p>
           </div>
         </div>
-        <button
-          className={
-            expand
-              ? "item__datas__control item__datas__control__open"
-              : "item__datas__control"
-          }
-          onClick={() => {
-            showModal();
-            peopleAct(people);
-            // alert(JSON.stringify(people));
-          }}
-        >
-          {Icons.control}
-        </button>
+        {Object.values(people).length > 0 && (
+          <button
+            className={
+              expand
+                ? "item__datas__control item__datas__control__open"
+                : "item__datas__control"
+            }
+            onClick={() => {
+              showModal();
+              peopleAct(people);
+              // alert(JSON.stringify(people));
+            }}
+          >
+            {Icons.control}
+          </button>
+        )}
       </article>
     </ContainerItem>
   );

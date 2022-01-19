@@ -44,19 +44,21 @@ export function Modal({ visible, hiddenModal, peoples }: Props) {
             <button className="modal__close" onClick={hiddenModal}>
               {Icons.close}
             </button>
-            {Object.values(peoples).map((elem, id) => (
-              <ContentModalProfile key={id}>
-                <img
-                  src={elem.profilePhoto}
-                  alt="Foto palestrante"
-                  className="profile__photo__img"
-                />
-                <div className="profile__infos">
-                  <strong className="profile__name">{elem.name}</strong>
-                  <p className="profile__description">{elem.description}</p>
-                </div>
-              </ContentModalProfile>
-            ))}
+            {Object.values(peoples)
+              .filter(e => e.description !== "")
+              .map((elem, id) => (
+                <ContentModalProfile key={id}>
+                  <img
+                    src={elem.profilePhoto}
+                    alt="Foto palestrante"
+                    className="profile__photo__img"
+                  />
+                  <div className="profile__infos">
+                    <strong className="profile__name">{elem.name}</strong>
+                    <p className="profile__description">{elem.description}</p>
+                  </div>
+                </ContentModalProfile>
+              ))}
           </ContentModal>
         </BackDrop>
       )}

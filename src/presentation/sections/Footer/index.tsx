@@ -50,10 +50,22 @@ export function Footer() {
                 <a href="">{Icons.facebook}</a>
               </li>
               <li>
-                <a href="">{Icons.instagram}</a>
+                <a
+                  href="https://www.instagram.com/invites/contact/?i=10oz6c390egd0&utm_content=npq0wv1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {Icons.instagram}
+                </a>
               </li>
               <li>
-                <a href="">{Icons.youtube}</a>
+                <a
+                  href="https://www.youtube.com/channel/UCqULONgqES7sK_pAtr1pwdA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {Icons.youtube}
+                </a>
               </li>
             </ul>
           </nav>
