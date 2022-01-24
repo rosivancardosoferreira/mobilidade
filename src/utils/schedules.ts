@@ -162,12 +162,6 @@ const Schedules = [
   },
   {
     day: "28",
-    title: "Pedalando pelas ruas de Itacoatiar",
-    people: [Peoples.Ednilce],
-    time: "8h às 9h"
-  },
-  {
-    day: "28",
     title: "A mobilidade urbana por bicicletas nas cidades brasileiras",
     people: [Peoples.Nadia],
     time: "9 às 10h"
@@ -183,6 +177,12 @@ const Schedules = [
     title: "Encerramento do Evento",
     people: [],
     time: "11h"
+  },
+  {
+    day: "29",
+    title: "Pedalando pelas ruas de Itacoatiara",
+    people: [Peoples.Ednilce],
+    time: "7h"
   }
 ];
 
