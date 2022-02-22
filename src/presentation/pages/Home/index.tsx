@@ -4,6 +4,7 @@ import { Header, Footer } from "presentation/sections";
 import {
   AboutEvent,
   BannerInfo,
+  HowWasIt,
   MaterialDownload,
   Schedule,
   Subscription
@@ -18,6 +19,7 @@ export default function Home() {
       <Subscription />
       <Schedule />
       <MaterialDownload />
+      <HowWasIt />
       <Footer />
     </>
   );

@@ -138,6 +138,7 @@ export const HeaderContainer = styled.header<propsHeader>`
           transform: translateY(7px);
         }
       }
+
       .l-header__menu.l-header__open .l-header__menu_burger {
         transform: translateX(-50px);
         background-color: transparent;
